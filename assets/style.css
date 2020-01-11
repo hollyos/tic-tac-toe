@@ -1,0 +1,129 @@
+html {
+  font-family: avenir, sans-serif;
+}
+
+.ttt-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ttt-game header {
+  margin: 60px 0 20px;
+}
+
+.ttt-title {
+  color: #444;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.ttt-game form {
+  width: 332px;
+}
+
+.ttt-board-wrapper {
+  position: relative;
+}
+
+.ttt-win-message-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+.ttt-win~.ttt-win-message-wrapper {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.ttt-win-message {
+  color: #2D4558;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ttt-board {
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  display: grid;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  height: 336px;
+  padding: 15px;
+  width: 332px;
+}
+
+.ttt-board.ttt-win {
+  opacity: 0.333;
+}
+
+.ttt-tile {
+  align-items: center;
+  background: #EAEAEA;
+  border: none;
+  color: #2D4558;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Flamenco', avenir, sans-serif;
+  font-weight: 700;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.ttt-tile:empty:hover {
+  background: #2D4558;
+}
+
+.ttt-win .ttt-tile:empty:hover {
+  background: #EAEAEA;
+}
+
+.ttt-tile:empty:active {
+  background: #C4C4C4;
+}
+
+.ttt-win .ttt-tile:empty:active {
+  background: #EAEAEA;
+}
+
+.ttt-tile span {
+  font-size: 62px;
+  line-height: 42px;
+}
+
+.ttt-button {
+  background: #2D4558;
+  border-radius: 2px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  height: 60px;
+  letter-spacing: 0.1em;
+  margin-top: 32px;
+  transition: background 0.3s ease;
+  width: 200px;
+}
+
+.ttt-button:hover {
+  background: #243746;
+}
